@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f8f9fa;
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,43 +17,48 @@
         }
         .login-container {
             background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            max-width: 100%;
         }
         .login-container h2 {
             margin-top: 0;
             text-align: center;
+            color: #333;
         }
         .login-container input[type="text"],
         .login-container input[type="password"] {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             margin: 10px 0;
             border: 1px solid #ccc;
-            border-radius: 3px;
+            border-radius: 5px;
             box-sizing: border-box;
-            cursor: pointer; /* Added cursor pointer */
+            font-size: 16px;
         }
-        .login-container input[type="submit"] {
+        .login-container input[type="submit"],
+        .login-container input[type="button"] {
             width: 100%;
             background-color: #007bff;
             color: #fff;
-            padding: 10px;
-            margin-top: 10px; /* Added margin-top */
+            padding: 12px;
             border: none;
-            border-radius: 3px;
+            border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            font-size: 16px;
         }
-        .login-container input[type="submit"]:hover {
+        .login-container input[type="submit"]:hover,
+        .login-container input[type="button"]:hover {
             background-color: #0056b3;
         }
-        .login-container .password-recovery {
+        .login-container .create-account {
             text-align: center;
-            margin-top: 10px;
+            margin-top: 15px;
         }
-        .login-container .password-recovery a {
+        .login-container .create-account a {
             color: #007bff;
             text-decoration: none;
         }
@@ -65,11 +70,13 @@
         <form action="#" method="post">
             <input type="text" name="username" placeholder="Username" required>
             <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
             <input type="submit" value="Login">
+            <div class="create-account">
+                <span>Don't have an account?</span>
+                <input type="button" value="Create Account" onclick="location.href='registration.html'">
+            </div>
         </form>
-        <div class="password-recovery">
-            <a href="#">Forgot your password?</a>
-        </div>
     </div>
 </body>
 </html>
