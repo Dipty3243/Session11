@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>this is login page</title>
+    <title>Login Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -33,12 +33,14 @@
             border: 1px solid #ccc;
             border-radius: 3px;
             box-sizing: border-box;
+            cursor: pointer; /* Added cursor pointer */
         }
         .login-container input[type="submit"] {
             width: 100%;
             background-color: #007bff;
             color: #fff;
             padding: 10px;
+            margin-top: 10px; /* Added margin-top */
             border: none;
             border-radius: 3px;
             cursor: pointer;
@@ -46,6 +48,14 @@
         }
         .login-container input[type="submit"]:hover {
             background-color: #0056b3;
+        }
+        .login-container .password-recovery {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .login-container .password-recovery a {
+            color: #007bff;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -57,6 +67,9 @@
             <input type="password" name="password" placeholder="Password" required>
             <input type="submit" value="Login">
         </form>
+        <div class="password-recovery">
+            <a href="#">Forgot your password?</a>
+        </div>
     </div>
 </body>
 </html>
